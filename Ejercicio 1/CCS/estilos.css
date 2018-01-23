@@ -1,0 +1,151 @@
+﻿@charset "UTF-8";
+
+@font-face {
+    /*Se incorporo la fuente de la pelicula de Guardianes de la Galaxia*/
+    font-family: GuardiansFont;
+    src: url('../Fuentes/Guardians.ttf');
+}
+@font-face {
+    /*Se incorporo la fuente de un comic*/
+    font-family: QarmicFont;
+    src: url('../Fuentes/Qarmic.ttf');
+}
+
+
+body{
+    /*Se utilizo un color gris de fondo*/
+    background-color: #747474;
+}
+
+h1 {
+	font-family: GuardiansFont;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: normal;
+	color: white;
+	text-shadow: 5px 5px #000000;
+    text-align:center;
+}
+
+/*Se crea una formato para la foto principal*/
+.foto {
+    padding:0px 0px 10% 0px;
+    background-color:black;
+    margin-left:10%;
+    width:80%;
+    border-radius: 20px;
+}
+
+/*Se crea una caja de texto para poner el texto*/
+.texto {
+	font-family: QarmicFont;
+    font-size:100%;
+    margin-left:10%;
+    margin-top:-9%;
+    margin-bottom:5%;
+    width:76%;
+    padding:2% 2% 2% 2%;
+    background-color:black;
+    color: white;
+    border-radius: 20px;
+    text-align: justify;
+}
+
+a{
+    color:orange;
+	cursor:pointer;
+    text-decoration: none;
+}
+
+table {
+    width: 85%;
+    margin-left:7.5%;
+}
+
+th {
+	width: 20%;
+    vertical-align: center;
+}
+
+.th2{
+	width: 50%;
+    vertical-align: center;
+}
+
+.botonMenu {	
+        /*Boton para los personajes*/
+    border: 1px solid black;
+    border-radius:20px;
+    display:inline-block;
+}
+
+.botonMenu:hover {
+    opacity: 0.5;
+    background-color:white;
+    filter: alpha(opacity=50);
+    /*Poner una transparencia al poner el cursor sobre el boton*/
+	cursor:pointer;
+}
+
+/*Se utilizo la etiqueta tooltip, encontrada en www.w3schools.com para mostrar el nombre del personaje */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    margin-left: -60px;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    /*Se le adiciono la fuente especial de Guardianes de la galaxia.*/
+    font-family: GuardiansFont;
+    /*Se configuro para que el texto siempre sea el 70% del tamaño de el tooltip*/
+    font-size:70%;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    top: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.botonRef {
+    position: fixed;
+    bottom: 35%;
+    left: 0;	
+    width: 10%;
+    cursor: pointer;
+}
+
+.botonMap {
+    position: fixed;
+    bottom: 50%;
+    width: 10%;
+    left: 0;
+    cursor: pointer;
+}
+
+.botonEst {
+    position: fixed;
+    bottom: 65%;
+    width: 10%;
+    left: 0;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 780px) {	
+    h1{
+	   font-size: 20px;
+	   text-align: center;
+    }
+    .texto {
+    font-size:10px;}
+}

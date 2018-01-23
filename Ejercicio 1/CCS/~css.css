@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+@font-face {
+    /*Se incorporo la fuente de la pelicula de Guardianes de la Galaxia*/
+    font-family: GuardiansFont;
+    src: url('../Fuentes/Guardians.ttf');
+}
+
+body{
+    /*Se utilizo un color gris de fondo*/
+    background-color: #A4A4A4;
+}
+
+h1 {
+	font-family: GuardiansFont;
+	font-size: 32px;
+    text-align: center;
+	font-style: normal;
+	font-weight: normal;
+	color: white;
+	text-shadow: 5px 5px #000000;
+	min-width:200px;
+    max-width:840px;
+}
+.menunav {
+	position:relative;
+    top:20px;
+	float:top;
+	margin-bottom: 30px;
+}
+.botonMenu {	
+    margin-bottom:10px;
+    width: 10%;
+	float: justify;
+}
+.botonMenu:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    /*Poner una transparencia al poner el cursor sobre el boton*/
+	cursor:pointer;
+}
+
+/*Se utilizo la etiqueta tooltip, encontrada en www.w3schools.com para mostrar el nombre del personaje */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    margin-left: -60px;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    /*Se le adiciono la fuente especial de Guardianes de la galaxia.*/
+    font-family: GuardiansFont;
+    /*Se configuro para que el texto siempre sea el 70% del tamaño de el tooltip*/
+    font-size:70%;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    top: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/*Se crea una caja negra para que no se vea fea la imagen negra y el texto se pone blanco*/
+.center {
+    margin: auto;
+    width: 70%;
+    padding:10px 10px 10px -100px; 
+    background-color:black;
+    margin: 0;
+    color:white;
+    border-radius: 10px;
+}
+
+.foto {
+    margin: auto;
+    width: 54%;
+    border-radius: 20px;
+}
+@media only screen and (max-width: 780px) {	
+    h1{
+	   font-size: 20px;
+	   text-align: center;
+    }
+}

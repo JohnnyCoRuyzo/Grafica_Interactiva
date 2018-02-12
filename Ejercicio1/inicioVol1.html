@@ -8,14 +8,18 @@
 	<meta name="viewport" content="width=device-width; initial-scale=1.0">
 </head>
 
+    
+<!--Todas las paginas contienen la misma estructura, es decir, Titulo, Imagen, Texto, Botones de Menu y Botones fijos-->
+	
 <body>
 	
-	<!--Titulo con la letra de la pelicula-->
+	<!--Titulo que describe lo mostrado en la página con la letra de la pelicula-->
 	<h1>GUARDIANES DE LA GALAXIA</h1>
 	
-	<!--Se inserta una foto con fondo negro, para poner texto en blanco-->
+	<!--Se inserta una foto dependiendo de la página mostrada-->
 	<img class="foto" src="Imagenes/GuardiansVol.1.jpg" alt="Guardians of the Galaxy">
 	
+	<!--Se inserta el texto descriptivo de la página, algunos tienen hipervínculos-->
 	<div class="texto">
 	Aventura espacial de proporciones épicas y repleta de acción que amplía el Universo Cinematográfico de Marvel. En esta ocasión, el temerario 
 	aventurero <a href="Starlord.html" target="_self">Peter Quill</a> es objeto de un implacable cazarrecompensas después de robar una misteriosa 
@@ -29,7 +33,7 @@
 	
 	</div>
 
-	<!--Se crea una tabla para mantener el orden y hacer que cuando cambie la pantalla de tamaño se reduzcan con la tabla-->
+	<!--Se insertan una tabla con los botones con sus respectivos hipervínculos a las páginas-->
 		 <table>
           <tr>
             <th>
@@ -66,12 +70,12 @@
 		</br>
 		  <tr>
 		  	  <th class="th2">
-		  	     <div class="tooltip"><a class="botonMenu" href="https://www.youtube.com/watch?v=uvUMGJ66IfU" target="_black"><img src="Imagenes/Logo1.png" width="50%" alt="Guardianes de la Galaxia Vol. 1"/></a>
+		  	     <div class="tooltip"><a class="botonMenu" href="https://www.youtube.com/watch?v=uvUMGJ66IfU" target="_black"><img src="Imagenes/Logo1.png" width="50%" alt="Vol. 1"/></a>
                    	  		<span class="tooltiptext">Vol. 1</span>
           	     	     </div>
 			  </th>
 		  	  <th class="th2">
-		  	     <div class="tooltip"><a class="botonMenu" href="inicioVol2.html" target="_self"><img src="Imagenes/Logo2.png" width="55%" alt="Guardianes de la Galaxia Vol. 2"/></a>
+		  	     <div class="tooltip"><a class="botonMenu" href="inicioVol2.html" target="_self"><img src="Imagenes/Logo2.png" width="55%" alt="Vol. 2"/></a>
                    	  <span class="tooltiptext">Vol. 2</span>
           	     </div>
 			  </th>
@@ -79,10 +83,10 @@
 		</table>
 
 
-
+	<!--Se insertan botones fijos en la pantalla, llevan a páginas de youtube, el mapa del sitio y las referencias utilizadas-->
 			     <a class="botonEst" href="https://www.youtube.com/watch?v=uvUMGJ66IfU" target="_black"><img src="Imagenes/Estrella.png" width="50%" alt="Estrella"/></a>
-			     <a class="botonMap" href="https://www.youtube.com/watch?v=uvUMGJ66IfU" target="_black"><img src="Imagenes/Mapa.png" width="50%" alt="Mapa"/></a>
-			     <a class="botonRef" href="https://www.youtube.com/watch?v=uvUMGJ66IfU" target="_black"><img src="Imagenes/Clip.png" width="50%" alt="Referencias"/></a>
+			     <a class="botonMap" href="Mapa.html" target="_self"><img src="Imagenes/Mapa.png" width="50%" alt="Mapa"/></a>
+			     <a class="botonRef" href="Referencias.html" target="_self"><img src="Imagenes/Clip.png" width="50%" alt="Referencias"/></a>
                    	  	
 	
 </body>

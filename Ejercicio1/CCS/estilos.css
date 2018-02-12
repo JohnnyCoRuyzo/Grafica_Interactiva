@@ -1,0 +1,247 @@
+﻿@charset "UTF-8";
+
+@font-face {
+    /*Se incorporo la fuente de la pelicula de Guardianes de la Galaxia*/
+    font-family: GuardiansFont;
+    src: url('../Fuentes/Guardians.ttf');
+}
+@font-face {
+    /*Se incorporo la fuente de un comic*/
+    font-family: QarmicFont;
+    src: url('../Fuentes/Qarmic.ttf');
+}
+
+body{
+    /*Se utilizo un color gris de fondo*/
+    background-color: #747474;
+}
+
+/*Se incorpora la fuente de los guardianes de la galaxia con un tamaño de 40px, sin negrilla y sin estilos, de color blanco, centrado y con sombras*/
+h1 {
+	font-family: GuardiansFont;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: normal;
+	color: white;
+	text-shadow: 5px 5px #000000;
+    text-align:center;
+}
+
+/*Se crea una formato para la foto principal*/
+.foto {
+    /*Se redondean los bordes de la imagen*/
+    border-radius: 20px;
+    /*Se deja un espacio negro debajo de la imagen para que no se vean los bordes y se acople al texto de abajo*/  
+    padding:0px 0px 5% 0px;
+    background-color:black;
+    /*Se pone la imagen al 80% de la pantalla y se centra*/ 
+    margin-left:10%;
+    width:80%;
+}
+
+/*Se crea una caja de texto para poner el texto*/
+.texto {
+	font-family: QarmicFont;
+    font-size:100%;
+    margin-left:10%;
+    /*Se tiene que ver en un recuadro negro debajo de la imagen y debe casar perfectamente*/
+    margin-top:-13%;
+    /*Se deja un espacio para los botones de abajo*/
+    margin-bottom:2%;
+    width:76%;
+    /*Se ajusta el texto dentro de la caja y se justifica*/
+    padding:10% 2% 2% 2%;    
+    text-align: justify;
+    /*Se pone fondo negro y letra blanca*/
+    background-color:black;
+    color: white;
+    /*Se pone un borde redondeado*/
+    border-radius: 20px;
+}
+
+a{
+    /*Se dejo que el hipervínculo siempre tuviera letra naranja, que cambiara el cursor sobre él, y no tuviera linea debajo*/
+    color:orange;
+	cursor:pointer;
+    text-decoration: none;
+}
+
+table {
+    /*Se ajustó para que la tabla tuviera siempre el 85% de la pantalla y siempre estuviera centrada*/
+    width: 85%;
+    margin-left:7.5%;
+}
+
+th {
+    /*Se ajustó para que cada casilla de la tabla tuviera siempre el 20% de la tabla y siempre estuviera centrada, para los botones de los personajes*/
+	width: 20%;
+    vertical-align: center;
+}
+
+.th2{
+    /*Se ajustó para que cada casilla de la tabla tuviera siempre el 50% de la tabla y siempre estuviera centrada, para los logos de las peliculas*/
+	width: 50%;
+    vertical-align: center;
+}
+
+.botonMenu {	
+    /*Boton para los personajes con borde definido y redondo*/
+    border: 1px solid black;
+    border-radius:20px;
+    display:inline-block;
+}
+
+.botonMenu:hover {
+    /*Poner una transparencia al poner el cursor sobre el boton de los personajes o los logos*/
+    opacity: 0.5;
+    background-color:white;
+    filter: alpha(opacity=50);
+	cursor:pointer;
+}
+
+/*Se utilizo la etiqueta tooltip, encontrada en www.w3schools.com para mostrar el nombre del personaje */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    /*Se crea una etiqueta oculta*/
+    visibility: hidden;
+    /*Se posiciona debajo y en la mitad del boton*/
+    margin-left: -60px;
+    width: 120px;
+    padding: 5px 0;
+    top: 100%;
+    position: absolute;
+    z-index: 1;
+    /*Texto de color blanco y fondo negro*/
+    background-color: black;
+    color: white;
+    /*Se le adiciono la fuente especial de Guardianes de la Galaxia.*/
+    font-family: GuardiansFont;
+    /*Se configuro para que el texto siempre sea el 70% del tamaño de el tooltip y este centrado*/
+    font-size:70%;
+    text-align: center;
+    /*Se le agregaron los bordes*/
+    border-radius: 6px;
+}
+
+.tooltip:hover .tooltiptext {
+    /*Cuando se ponga el cursor encima del boton de los personajes se hace visible la etiqueta*/
+    visibility: visible;
+}
+
+/*Se crea un boton para crear un hipervínculo hacia el mapa del sitio*/
+.botonMap {
+    /*Se fija en la mitad de la pantalla al lado izquierdo*/
+    position: fixed;
+    bottom: 50%;
+    width: 10%;
+    left: 0;
+    cursor: pointer;
+}
+
+/*Se crea un boton para crear un hipervínculo hacia el video en Youtube de las peliculas*/
+.botonEst {
+    /*Se fija arriba de el boton del mapa del sitio al lado izquierdo de la pantalla*/
+    position: fixed;
+    bottom: 65%;
+    width: 10%;
+    left: 0;
+    cursor: pointer;
+}
+
+/*Se crea un boton para crear un hipervínculo hacia las referencias*/
+.botonRef {
+    /*Se fija debajo de el boton del mapa del sitio al lado izquierdo de la pantalla*/
+    position: fixed;
+    bottom: 35%;
+    left: 0;	
+    width: 10%;
+    cursor: pointer;
+}
+
+/*Se crea un boton para crear un hipervínculo hacia las referencias*/
+.botonMap {
+    /*Se fija en la mitad de la pantalla al lado izquierdo*/
+    position: fixed;
+    bottom: 50%;
+    width: 10%;
+    left: 0;
+    cursor: pointer;
+}
+
+/*Se introduce un estilo de lista con numero romano para el mapa de navegación*/
+ol.c {
+    list-style-type: upper-roman;
+}
+
+/*Se introduce un estilo de lista con letras para el mapa de navegación*/
+ol.d {
+    list-style-type: lower-alpha;
+}
+
+@media only screen and (max-width: 780px) {	
+    
+    /*Se ajusta el título para que se pueda leer claramente en una pantalla de menos de 780px*/
+    h1{
+	   font-size: 20px;
+	   text-align: center;
+    }
+    
+    /*Se ajusta el texto para que se pueda leer claramente en una pantalla de menos de 780px*/
+    .texto {
+    font-size:10px;}
+    
+    /*Se ajustan los bordes de los botones*/
+    .botonMenu{
+        border-radius: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {	
+    
+    /*Se ajusta el título para que se pueda leer claramente en una pantalla de menos de 480px*/
+    h1{
+	   font-size: 10px;
+	   text-align: center;
+    }
+    /*Se ajusta el texto para que se pueda leer claramente en una pantalla de menos de 480px*/
+    .texto {
+    font-size:5px;
+    margin-top: -50px;
+    /*Se ajusta para que la caja y el texto se ajusten cada vez que cambia el tamaño de la pantalla*/
+    padding-top: 40px;
+    padding-bottom: 10px;
+    text-align: justify;
+    }
+    
+    /*Se ajusta para que la numeración de la lista no se vea tan espaciada en un tamaño menor al de 480 px.*/
+    ol.c {
+    padding: 5%;}
+    /*Se ajusta para que la numeración de la lista no se vea tan espaciada en un tamaño menor al de 480 px.*/
+    ol.d {
+    padding: 3%;}
+    
+    .tooltip .tooltiptext {
+    /*Se configuro para que el texto del tooltip siempre sea 4px*/
+    font-size:4px;
+    width: 60px;
+    margin-left: -30px;
+    }
+    
+    /*Se ajusta la imagen principal cuando la pantalla es menor que 480px*/
+    .foto {
+        padding-bottom:15px;
+        background-color:black;
+        margin-left:10%;
+        width:80%;
+        border-radius: 20px;
+    }
+    
+    /*Se ajustan los bordes de los botones*/
+    .botonMenu{
+        border-radius: 7px;
+    }
+}
